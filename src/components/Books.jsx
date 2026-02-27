@@ -49,7 +49,7 @@ function Books() {
     const handleDelete = async (id) => {
         if (window.confirm('Are you sure you want to delete this book?')) {
             try {
-                await axios.delete(`${API_CONFIG.BOOKS_API}/book/${id}`);
+                await axios.delete(`${API_CONFIG.BOOKS_API}/books/${id}`);
                 fetchBooks();
                 alert('Book deleted successfully!');
             } catch (err) {

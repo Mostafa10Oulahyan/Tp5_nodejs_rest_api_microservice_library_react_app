@@ -49,7 +49,7 @@ function Customers() {
     const handleDelete = async (id) => {
         if (window.confirm('Are you sure you want to delete this customer?')) {
             try {
-                await axios.delete(`${API_CONFIG.CUSTOMERS_API}/customer/${id}`);
+                await axios.delete(`${API_CONFIG.CUSTOMERS_API}/customers/${id}`);
                 fetchCustomers();
                 alert('Customer deleted successfully!');
             } catch (err) {
